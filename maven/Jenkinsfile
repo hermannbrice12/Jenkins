@@ -17,6 +17,13 @@ stage('Test') {
                 sh 'mvn test'
             }
         }
+stage('Run') {
+            steps {
+                // Si c'est une application web, vous pouvez la déployer sur un serveur d'application
+                // ou tout autre méthode spécifique à votre projet.
+                sh 'echo "Deploiement réussi"'
+            }
+        }
 
     }
 }
