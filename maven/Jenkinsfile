@@ -24,7 +24,14 @@ stage('Run') {
                 sh 'echo "Deploiement réussi"'
             }
         }
-
+post {
+        success {
+            echo 'Le build, les tests et le déploiement se sont bien déroulés!'
+        }
+        failure {
+            echo 'Il y a eu une erreur durant le pipeline.'
+        }
     }
 }
 
+   
