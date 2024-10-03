@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'git@github.com:hermannbrice12/projet-maven.git'
+                git credentialsId: 'github-ssh-key', url: 'git@github.com:hermannbrice12/projet-maven.git'
             }
         }
         stage('Build') {
